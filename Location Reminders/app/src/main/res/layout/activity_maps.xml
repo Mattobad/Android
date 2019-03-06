@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/edt_location"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/Button_Add"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/Bsearch"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="onSearch"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/Btype"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="changeType"
+            android:text="Change-Map" />
+
+    </LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.sarbo.myapplication.MapsActivity" />
+
+</LinearLayout>
+

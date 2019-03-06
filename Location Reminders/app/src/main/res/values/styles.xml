@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="taskStyle">
+        <item name="android:textSize">@dimen/task_name</item>
+        <item name="android:textColor">@color/Light_brown</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+    <style name="taskStyle1">
+        <item name="android:textSize">@dimen/task_name</item>
+        <item name="android:textColor">@color/dark_lime</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+    <style name="locStyle">
+        <item name="android:textSize">@dimen/loc_name</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+    <style name="locStyle1">
+        <item name="android:textSize">@dimen/loc_name</item>
+        <item name="android:textColor">@color/lime</item>
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+    <style name="noteStyle">
+        <item name="android:textSize">@dimen/note_txt</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+    <style name="noteStyle1">
+        <item name="android:textSize">@dimen/note_txt</item>
+        <item name="android:textColor">@color/light_lime</item>
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+    <style name="buttonStyle">
+        <item name="android:textSize">@dimen/button_txt</item>
+        <item name="android:textColor">@color/txt_button</item>
+
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+    <style name="edtxtStyle">
+        <item name="android:textSize">@dimen/edt_txt</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:layout_marginTop">5sp</item>
+    </style>
+
+</resources>

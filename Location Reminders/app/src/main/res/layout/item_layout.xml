@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/liner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/taskStyle1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task name :"
+            android:textColor="@color/dark_lime" />
+
+        <TextView
+            android:id="@+id/TVtask"
+            style="@style/taskStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task name " />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/locStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Location name :"
+            android:textColor="@color/lime" />
+
+        <TextView
+            android:id="@+id/TVloc"
+            style="@style/locStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Location name" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/noteStyle1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Note:"
+            android:textColor="@color/light_lime" />
+
+        <TextView
+            android:id="@+id/TVnote"
+            style="@style/noteStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingLeft="5dp"
+            android:text="Note" />
+
+
+    </LinearLayout>
+
+
+    <view
+        class="android.view.View"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#2aca2d" />
+
+    <view
+        class="android.view.View"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#0e081d" />
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Location Reminder</string>
+
+    <string name="hello_world">Do you want to add alarm ?</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_create_alram">CreateAlram</string>
+    <string name="task_name">Task name</string>
+    <string name="note_text">Note</string>
+
+    <string name="location_name">Location name</string>
+    <string name="title_activity_update_alarm">UpdateAlarm</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_confirm_alarm">ConfirmAlarm</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_alarm">AlarmActivity</string>
+    <string name="str_btn_quit">str_btn_quit</string>
+    <string name="str_btn_set_alarm">str_btn_set_alarm</string>
+    <string name="title_activity_demo">DemoActivity</string>
+</resources>

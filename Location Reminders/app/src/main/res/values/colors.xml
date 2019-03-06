@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_gray">#181818</color>
+
+    <color name="yellowis_blue">#188</color>
+    <color name="red">#ef00</color>
+    <color name="Light_brown">#C7641A</color>
+    <color name="blue">#2196f3</color>
+    <color name="grey">#6E695A</color>
+   <color name="light_grey">#B3AC8D</color>
+    <color name="txt_button">#ef0</color>
+    <color name="light_lime">#AFB425</color>
+    <color name="lime">#9E9D24</color>
+    <color name="dark_lime">#827717</color>
+
+
+
+</resources>
