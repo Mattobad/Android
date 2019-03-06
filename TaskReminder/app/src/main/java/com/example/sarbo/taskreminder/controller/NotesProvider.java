@@ -1,0 +1,86 @@
+package com.example.sarbo.taskreminder.controller;
+
+import android.content.ContentProvider;
+import android.content.ContentValues;
+import android.content.UriMatcher;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
+import com.example.sarbo.taskreminder.database.DBOpenHelper;
+
+/**
+ * Created by sarbo on 12/23/2017.
+ */
+
+public class NotesProvider extends ContentProvider {
+    private static final String AUTHORITY = "com.example.sarbo.taskreminder.notesprovider";
+    private static final String BASE_PATH = "tasks";
+    public static final Uri CONTENT_URI =
+            Uri.parse("content://" + AUTHORITY + "/" + BASE_PATH);
+
+    //Constant to identify the requested operation
+    private static final int NOTES = 1;   // means give me the data
+    private static final int NOTES_ID = 2; // deals with only a single record
+
+    //use to parse the Uri and tell which request has been requested.....
+
+    private static final UriMatcher uriMatcher =
+            new UriMatcher(UriMatcher.NO_MATCH);
+
+    public static final String CONTENT_ITEM_TYPE = "Note";
+
+    static {
+        uriMatcher.addURI(AUTHORITY, BASE_PATH, NOTES);
+        uriMatcher.addURI(AUTHORITY, BASE_PATH + "/#", NOTES_ID);
+    }
+
+    private SQLiteDatabase database;
+
+    @Override
+    public boolean onCreate() {
+        DBOpenHelper helper = new DBOpenHelper(getContext());
+        database = helper.getWritableDatabase();
+        return true;
+    }
+
+    @Nullable
+    @Override
+    public Cursor query(@NonNull Uri uri, @Nullable String[] projection,
+                        @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
+
+        if (uriMatcher.match(uri)== NOTES_ID){
+            selection = DBOpenHelper.TASK_ID + "=" + uri.getLastPathSegment();
+        }
+        return database.query(DBOpenHelper.TABLE_TASK, DBOpenHelper.ALL_COLUMNS,
+                selection, null, null, null,
+                DBOpenHelper.TASK_CREATED + " DESC");
+    }
+
+    @Nullable
+    @Override
+    public String getType(@NonNull Uri uri) {
+        return null;
+    }
+
+    @Nullable
+    @Override
+    public Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
+
+        long id = database.insert(DBOpenHelper.TABLE_TASK,
+                null, values);
+        return Uri.parse(BASE_PATH + "/" + id);
+    }
+
+    @Override
+    public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
+        return database.delete(DBOpenHelper.TABLE_TASK, selection, selectionArgs);
+    }
+
+    @Override
+    public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
+        return database.update(DBOpenHelper.TABLE_TASK, values, selection, selectionArgs);
+    }
+}
